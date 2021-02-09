@@ -187,7 +187,7 @@ hook.Add("Tick", "AKPL", function()
     file.Write("akpl.dat", util.Compress(util.TableToJSON(AKPL)))
     for k, v in ipairs(ents.FindByClass("keypad*")) do
         AKPL.RegisterCallback(v)
-        AKPL.TestCodes(v) --this only works if the first 3 digits of a keypad code are under 255, TODO account for keypad cooldowns
+        -- AKPL.TestCodes(v) --this only works if the first 3 digits of a keypad code are under 255, TODO account for keypad cooldowns
     end
 end)
  
